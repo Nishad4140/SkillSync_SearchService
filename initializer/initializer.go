@@ -8,6 +8,6 @@ import (
 
 func Initializer(mongoDB *mongo.Database) *service.SearchService {
 	adapter := adapter.NewSearchAdapter(mongoDB)
-	service := service.NewSearchService(adapter, "ss-user-service:4001")
+	service := service.NewSearchService(adapter, "user-service:4001")
 	return service
 }
